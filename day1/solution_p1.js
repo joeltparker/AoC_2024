@@ -6,9 +6,6 @@ console.log(input)
 let rows = input.map(line => line.replaceAll(/\s+/g, ',').split(','));
 let [column1, column2] = [rows.map(row => parseInt(row[0])), rows.map(row => parseInt(row[1]))];
 
-//console.log('column1: ' + column1)
-//console.log('column2: ' + column2)
-
 column1 = column1.sort((a, b) => a - b);
 column2 = column2.sort((a, b) => a - b);
 
@@ -20,8 +17,5 @@ let sum = diff.reduce((total, value) => {
     return total + value
 })
 
-//console.log('column1: ' + column1)
-//console.log('column2: ' + column2)
-//console.log('diff: ' + diff)
 console.log('sum: ' + sum)
 
